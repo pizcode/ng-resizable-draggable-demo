@@ -1,0 +1,30 @@
+<!-- <p>moveable works!</p> -->
+
+<div class="container" #container (mousedown)="setStatus($event, 2)" (window:mouseup)="setStatus($event, 0)"
+  [style.width.px]="data.width"  [style.height.px]="data.height" [style.border-color]="data.color" [style.top.px]="data.top" [style.left.px]="data.left">
+
+  <div class="resize resize__right" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.RIGHT"></div>
+
+  <div class="resize resize__left" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.LEFT"></div>
+
+  <div class="resize resize__top" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.TOP"></div>
+
+  <div class="resize resize__bottom" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.BOTTOM"></div>
+
+  <div class="resize resize__bottom--right" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.BOTTOM_RIGHT"></div>
+
+  <div class="resize resize__bottom--left" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.BOTTOM_LEFT"></div>
+
+  <div class="resize resize__top--right" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.TOP_RIGHT"></div>
+
+  <div class="resize resize__top--left" (mousedown)="setStatus($event, 1)" (resize)="onResize($event)"
+    [targetElement]="container" [direction]="AngularResizeElementDirection.TOP_LEFT"></div>
+
+</div>

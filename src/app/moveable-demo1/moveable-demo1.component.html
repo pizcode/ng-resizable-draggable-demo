@@ -1,0 +1,10 @@
+<p>moveable-demo works!</p>
+<a routerLink="/demo">DEMO 2</a>
+<br><br>
+<button class="icon_btn" (click)="statusDisable()">
+  <img [src]="icon_src" width="15px">
+</button>
+<app-moveable #child1 [enable]="disable" [height]="400" [width]="400" [left]="90" [top]="90" [color]="'green'">
+</app-moveable>
+<app-moveable #child2 [enable]="disable" [height]="400" [width]="400" [left]="590" [top]="90" [color]="'red'">
+</app-moveable>
